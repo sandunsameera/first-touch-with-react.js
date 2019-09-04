@@ -21,6 +21,8 @@ mysqlConnection.connect((err)=>{
 
 app.listen(3000,()=>console.log('Express server is running'));
 
+//Retrieve all users
+
 app.get('/users',(req,res)=>{
     mysqlConnection.query('SELECT * FROM user',(err,rows,fields)=>{
        if(!err)
@@ -28,4 +30,15 @@ app.get('/users',(req,res)=>{
        else
        console.log('fuck again');
     })
-})
+});
+
+//delete user
+
+app.get('/userdelete/:id',(req,res)=>{
+    mysqlConnection.query('DELETE * FROM user ',(err,rows,fields)=>{
+       if(!err)
+       res.send(req.params.id + "deleted");
+       else
+       console.log('fuck again');
+    })
+});
