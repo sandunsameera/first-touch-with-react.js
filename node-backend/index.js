@@ -32,7 +32,7 @@ app.get('/users',(req,res)=>{
     })
 });
 
-//delete user
+//delete user from users
 
 app.get('/userdelete/:id',(req,res)=>{
     mysqlConnection.query('DELETE * FROM user ',(err,rows,fields)=>{
