@@ -43,7 +43,7 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <img className ='logo'src={logo} width="100" heigh='100' alt="fuck"/>
+        <img className ='logo'src={logo} width="300" heigh='300' alt="fuck"/>
         <h1 className = 'app-title'>To Do app using React.js</h1>
         <div className = 'container'>Add an item..</div>
         <br/>
